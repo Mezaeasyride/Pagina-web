@@ -1,177 +1,52 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mendoza Easy Ride</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
-  <link rel="icon" type="image/png" href="./img/MER 4.png" />
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+body {
+  background: url(img/c30d6306-e3a1-4511-b39c-30629b6b7397.png) no-repeat center center fixed;
+  background-size: cover;
+  scroll-behavior: smooth;
+  background-color: #ffffff;
+  text-align: center;
+ }
 
-<!-- Modal Idioma -->
-<div class="modal fade" id="idiomaModal" tabindex="-1" aria-labelledby="idiomaModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content text-center">
-      <div class="modal-header">
-        <h5 class="modal-title w-100" id="idiomaModalLabel">Seleccioná tu idioma / Escolha seu idioma</h5>
-      </div>
-      <div class="modal-body">
-        <button class="btn btn-outline-primary m-2" onclick="seleccionarIdioma('es')">Español</button>
-        <button class="btn btn-outline-success m-2" onclick="seleccionarIdioma('pt')">Português</button>
-      </div>
-    </div>
-  </div>
-</div>
+.hero {
+      background-color: rgba(116, 105, 77, 0.37);
+      height: 80vh;
+      color: white;
+      align-items: center;
+      justify-content: center;
+      text-shadow: 2px 2px 6px #000;
+}
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark  fixed-top">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="#">
-  <img src="./img/MER 4.png" alt="Logo Mendoza Easy Ride" style="height: 40px;" class="me-2">
-  <span class="logo">MENDOZA EASY RIDE</span>
-</a>
+.col-md-8{
+  color: #ffffff;
+  text-align: justify;
+  font-size:medium
+}
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#inicio">INICIO</a></li>
-        <li class="nav-item"><a class="nav-link" href="#servicios">SERVICIOS</a></li>
-        <li class="nav-item"><a class="nav-link" href="#nosotros">QUIENES SOMOS</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contacto">CONTACTO</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+.contact-item{
+  color: #ffffff;
+}
 
-<!-- Hero -->
-<header class="hero d-flex align-items-center justify-content-center text-center text-white">
-  <div class="container px-4">
-    <h1 class="display-4 fw-bold" data-idioma="es">Descubrí Mendoza con confort</h1>
-    <h1 class="display-4 fw-bold d-none" data-idioma="pt">Descubra Mendoza com conforto</h1>
-    <p class="lead mt-3" data-idioma="es">Traslados turísticos y enológicos a tu medida</p>
-    <p class="lead mt-3 d-none" data-idioma="pt">Traslados turísticos e enológicos sob medida</p>
-    <a href="#contacto" class="btn btn-outline-light btn-lg mt-4" data-idioma="es">Reservá ahora</a>
-    <a href="#contacto" class="btn btn-outline-light btn-lg mt-4 d-none" data-idioma="pt">Reserve agora</a>
-  </div>
-</header>
+.nav-item{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
 
+.section-title {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #6c1d1d;
+}
 
-<!-- Servicios -->
-<section class="py-5" id="servicios">
-  <div class="container">
-    <h2 class="text-center section-title mb-4" data-idioma="es">Nuestros Servicios</h2>
-    <h2 class="text-center section-title mb-4 d-none" data-idioma="pt">Nossos Serviços</h2>
-    <div class="row text-center">
-      <div class="col-md-4 mb-4">
-        <div class="p-3 shadow rounded" style="background-color: #f1e9ba49; color: white;">
-          <img src="./img/VISITA BODEGA.jpg" class="img-fluid rounded mb-3" alt="Bodegas Mendoza" width="350px">
-          <h5 data-idioma="es">Visitas a Bodegas</h5>
-          <h5 class="d-none" data-idioma="pt">Visitas a Vinícolas</h5>
-          <p data-idioma="es">Traslados a las mejores bodegas de Mendoza, con tiempo libre y guía disponible.</p>
-          <p class="d-none" data-idioma="pt">Traslados às melhores vinícolas de Mendoza, com tempo livre e guia disponível.</p>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="p-3 shadow rounded" style="background-color: #f1e9ba49; color: white;">
-          <img src="./img/caption.jpg" class="img-fluid rounded mb-3" alt="Alta montaña" width="420px">
-          <h5 data-idioma="es">Rutas de Alta Montaña</h5>
-          <h5 class="d-none" data-idioma="pt">Rotas de Alta Montanha</h5>
-          <p data-idioma="es">Excursiones a Uspallata, Dique Potrerillos, Puente del Inca, Aconcagua y más destinos icónicos.</p>
-          <p class="d-none" data-idioma="pt">Passeios a Uspallata, Ponte do Inca, Aconcágua e outros destinos icônicos.</p>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="p-3 shadow rounded" style="background-color: #f1e9ba49; color: white;">
-          <img src="./img/TRASLADO PRIVADO.jpg" class="img-fluid rounded mb-3" alt="Traslados personalizados" width="350px">
-          <h5 data-idioma="es">Traslados Personalizados</h5>
-          <h5 class="d-none" data-idioma="pt">Traslados Personalizados</h5>
-          <p data-idioma="es">Servicio puerta a puerta desde el aeropuerto, hotel o donde necesites.</p>
-          <p class="d-none" data-idioma="pt">Serviço porta a porta desde o aeroporto, hotel ou onde precisar.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+.logo{
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
 
-<!-- Quiénes Somos -->
-<section class="py-5 " id="nosotros">
-  <div class="container">
-    <div class="p-4 border">
-      <h2 class="text-center section-title mb-4" data-idioma="es">Quiénes Somos</h2>
-      <h2 class="text-center section-title mb-4 d-none" data-idioma="pt">Quem Somos</h2>
-      <div class="row justify-content-center">
-        <div class="col-md-8 text-center">
-          <p data-idioma="es">
-            <strong>En Mendoza Easy Ride somos un equipo apasionado por brindar experiencias únicas.
-            Combinamos seguridad, puntualidad y calidez humana para que vivas Mendoza de forma auténtica y cómoda.
-            Más que un traslado, ofrecemos un viaje lleno de recuerdos.</strong>
-          </p>
-          <p class="d-none" data-idioma="pt">
-            <strong>Na Mendoza Easy Ride somos uma equipe apaixonada por proporcionar experiências únicas.
-            Combinamos segurança, pontualidade e calor humano para que você viva Mendoza de forma autêntica e confortável.
-            Mais do que um traslado, oferecemos uma viagem cheia de memórias.</strong>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+.row {
+  padding: 40px;
+}
 
-<!-- Contacto -->
-<section class="py-5" id="contacto">
-  <div class="container">
-    <div class="p-4 border rounded shadow text-center">
-      <h2 class="section-title mb-4" data-idioma="es">Contacto</h2>
-      <h2 class="section-title mb-4 d-none" data-idioma="pt">Contato</h2>
-      <p data-idioma="es" class="contact-item"><strong>¿Listo para tu próxima aventura? Hacenos tu consulta por WhatsApp.</strong></p>
-      <p class="contact-item" data-idioma="pt"><strong>Pronto para a sua próxima aventura? Fale conosco pelo WhatsApp.</strong></p>
-      <a href="https://wa.me/34604200064" target="_blank" class="btn btn-success btn-lg mt-3">
-        <i class="bi bi-whatsapp"></i> WhatsApp
-      </a>
-    </div>
-  </div>
-</section>
+.me-2 {
+  border-radius: 20px;
+}
 
-<!-- Footer -->
-<footer class=" text-white text-center py-3">
-  <div class="mb-2">
-    <a href="https://www.instagram.com/mzaeasyride/?utm_source=ig_web_button_share_sheet" target="_blank" class="text-white fs-4 me-2">
-      <i class="bi bi-instagram"></i>
-    </a>
-  </div>
-  <small>&copy; 2025 Mendoza Easy Ride. Todos los derechos reservados.</small>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-<script>
-  // Mostrar modal siempre al cargar la página
-  document.addEventListener("DOMContentLoaded", function () {
-    const modal = new bootstrap.Modal(document.getElementById('idiomaModal'));
-    modal.show();
-  });
-
-  function seleccionarIdioma(idioma) {
-    // No guardamos el idioma en localStorage para preguntar siempre
-    mostrarIdioma(idioma);
-    const modal = bootstrap.Modal.getInstance(document.getElementById('idiomaModal'));
-    modal.hide();
-  }
-
-  function mostrarIdioma(idioma) {
-    document.querySelectorAll('[data-idioma]').forEach(el => {
-      el.classList.add('d-none');
-      if (el.getAttribute('data-idioma') === idioma) {
-        el.classList.remove('d-none');
-      }
-    });
-  }
-</script>
-
-</body>
-</html>
+.me-2 {
+  border-radius: 200px;
+}
