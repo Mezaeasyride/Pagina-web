@@ -13,7 +13,21 @@ body {
       align-items: center;
       justify-content: center;
       text-shadow: 2px 2px 6px #000;
-}
+  }
+
+  @media (max-width: 576px) {
+    .hero h1 {
+      font-size: 1.8rem;
+    }
+    .hero p.lead {
+      font-size: 1rem;
+    }
+    .hero {
+      padding-top: 120px;
+      padding-bottom: 40px;
+    }
+  }
+
 
 .col-md-8{
   color: #ffffff;
