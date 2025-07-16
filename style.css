@@ -10,7 +10,6 @@ body {
       background-color: rgba(116, 105, 77, 0.37);
       height: 80vh;
       color: white;
-      display: flex;
       align-items: center;
       justify-content: center;
       text-shadow: 2px 2px 6px #000;
